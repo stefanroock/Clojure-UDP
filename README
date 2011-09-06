@@ -1,13 +1,17 @@
 # clojure-udp
 
-FIXME: write description
+A very simple wrapper around Java UPD.
 
 ## Usage
 
-FIXME: write
+(def receive-msg (make-receive 9001))
+(def send-msg (make-send "localhost" 9000))
+
+(send-msg "Hello World")
+(println (receive-msg))
 
 ## License
 
-Copyright (C) 2011 FIXME
+Copyright (C) 2011 Stefan Roock
 
 Distributed under the Eclipse Public License, the same as Clojure.
